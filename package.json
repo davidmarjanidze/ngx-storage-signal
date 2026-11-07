@@ -1,0 +1,58 @@
+{
+  "name": "ngx-storage-signal",
+  "version": "1.0.0",
+  "description": "Angular signal that saves its value to localStorage or sessionStorage and stays in sync between tabs.",
+  "type": "module",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "node build.js",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test": "node --test test/*.test.js",
+    "npm-publish": "npm run lint && npm run build && npm test && npm publish"
+  },
+  "author": "David Marjanidze",
+  "license": "ISC",
+  "homepage": "https://github.com/davidmarjanidze/ngx-storage-signal#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidmarjanidze/ngx-storage-signal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidmarjanidze/ngx-storage-signal/issues"
+  },
+  "keywords": [
+    "angular",
+    "signal",
+    "signals",
+    "localstorage",
+    "sessionstorage",
+    "storage",
+    "persist",
+    "ssr"
+  ],
+  "peerDependencies": {
+    "@angular/core": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@angular/core": "^22.2.5",
+    "@eslint/js": "^10.0.1",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.14.0",
+    "prettier": "^3.9.10",
+    "rxjs": "^7.8.2",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.1"
+  }
+}
